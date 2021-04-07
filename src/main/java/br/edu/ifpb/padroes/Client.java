@@ -5,12 +5,24 @@ import br.edu.ifpb.padroes.service.order.OrderManager;
 import br.edu.ifpb.padroes.service.payment.PaymentService;
 
 public class Client {
-    public static void main(String[] args) {
+    public static void main(Payment payment {
 
-        Order order = new Order();
-        OrderManager orderManager = new OrderManager(order);
-        orderManager.payOrder(PaymentService.PaymentType.CREDIT_CARD);
-        orderManager.cancelOrder();
+        System.out.println("Formas de pagamento")
+        payment.creditoCard();
+        payment.debit();
+        payment.paypal();
+
+
+        public static void main (String[] args){
+
+            payment creditoCard = new Payment ( "Cartão de Crédito", new creditoPag);
+
+            payment debit  = new Payment ( "Débito", new debitPag);
+
+            payment paypal= new Payment ( "Paypal", new PaypalPag)
+
+
+        }
 
     }
 }
