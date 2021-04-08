@@ -1,31 +1,48 @@
 package br.edu.ifpb.padroes.service.payment;
 
 public class PaymentService {
+     private CREDIT_CARD creditoCard;
+     private DEBIT debit; 
+     private PAYPAL paypal; 
 
-    public enum PaymentType {
-        CREDIT_CARD, DEBIT, BILLET, PAYPAL
+    
+
+     public Payment (enum CREDIT_CARD , enum DEBIT , enum PAYPAL ){
+
+            this.creditoCard = creditoCard;
+            this.debit = debit;
+            this.paypal = paypal; 
+
+     }
+
+
+     }
+     
+     public enum Getdebit(){
+        return this.debit;
     }
 
-    public void doPayment(PaymentType type) throws Exception {
-        switch (type) {
-            case CREDIT_CARD:
-                System.out.println("Do credit card payment!");
-                break;
-            case DEBIT:
-                System.out.println("Do debit payment!");
-                break;
-            case BILLET:
-                System.out.println("Do billet payment!");
-                break;
-            case PAYPAL:
-                System.out.println("Do paypal payment!");
-                break;
-            default:
-                throw new Exception("unknown payment method");
-        }
+    public enum GetPaypal(){
+        return this.paypal;
+    }
 
-
+    public void creditoCard(){
+        creditoPag.creditoCard();
 
     }
+
+    public void debit(){
+        debitPag.debit();
+
+    }
+
+    public void paypal(){
+        paypalPag.paypal();
+
+    }
+
+
+
+
 
 }
